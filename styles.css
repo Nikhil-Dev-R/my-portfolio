@@ -391,6 +391,45 @@ body {
   margin: 8px 0 0 18px;
   color: var(--muted)
 }
+/* Achievements & Certifications */
+.achievements-grid, .certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    margin-top: 16px;
+}
+
+.achievement-card, .cert-card {
+    background: var(--surface);
+    padding: 16px;
+    border-radius: var(--radius);
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+[data-theme="dark"] .achievement-card,
+[data-theme="dark"] .cert-card {
+    background: rgba(20, 24, 30, 0.6);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+}
+
+.achievement-card:hover, .cert-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+}
+
+.achievement-card i, .cert-card i {
+    font-size: 2rem;
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+
+.achievement-card h3, .cert-card h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
 
 /* CONTACT SECTION */
 .contact-section {
